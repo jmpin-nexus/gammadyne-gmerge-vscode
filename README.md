@@ -102,6 +102,7 @@ MIT License
 - [Gammadyne Mailer](https://www.gammadyne.com/)
 - G-Merge documentation (official)
 - [How to Create and Publish VS Code Extensions](doc/Publishing-VSCode-Extension.md)
+- [Git Tags Best Practices for VS Code Extensions](doc/git-tags-best-practice.md)
 
 ---
 
