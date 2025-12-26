@@ -98,8 +98,10 @@ MIT License
 
 ## 🔗 Related
 
+- [GitHub Repository](https://github.com/jmpin-nexus/gammadyne-gmerge-vscode)
 - [Gammadyne Mailer](https://www.gammadyne.com/)
 - G-Merge documentation (official)
+- [How to Create and Publish VS Code Extensions](doc/Publishing-VSCode-Extension.md)
 
 ---
 

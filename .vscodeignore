@@ -1,0 +1,16 @@
+.git/**
+.github/**
+.vscode/**
+node_modules/**
+src/**
+out/**
+dist/**
+*.log
+.DS_Store
+**/.DS_Store
+**/*.map
+**/*.ts
+**/*.tsx
+**/*.test.*
+**/__tests__/**
+images/gammadyne.png
