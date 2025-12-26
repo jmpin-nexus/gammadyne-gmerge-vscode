@@ -13,4 +13,3 @@ dist/**
 **/*.tsx
 **/*.test.*
 **/__tests__/**
-images/gammadyne.png
