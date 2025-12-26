@@ -1,0 +1,28 @@
+{
+  "if-endif": {
+    "prefix": "if",
+    "body": [
+      "[[if ${1:condition}]]",
+      "  ${0}",
+      "[[endif]]"
+    ],
+    "description": "G-Merge if/endif block"
+  },
+  "db_add_row": {
+    "prefix": "db_add_row",
+    "body": [
+      "[[db_add_row(",
+      "  \"EMAIL\", convert_lower_case(_email),",
+      "  \"NOME_PRIMEIRO\", _first_name,",
+      "  \"DATA_VALIDACAO\", [[date_current():yyyy-mm-dd hh:ii:ss]],",
+      "  \"ORIGEM_VALIDACAO\", 'gammadyne'",
+      ")]]"
+    ],
+    "description": "Insert a row into the database"
+  },
+  "disregard": {
+    "prefix": "disregard",
+    "body": ["[[disregard()]]"],
+    "description": "Disregard current item"
+  }
+}

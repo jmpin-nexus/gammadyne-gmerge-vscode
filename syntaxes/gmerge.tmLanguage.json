@@ -1,0 +1,92 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Gammadyne G-Merge",
+  "scopeName": "source.gmerge",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#tag" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#operators" },
+    { "include": "#keywords" },
+    { "include": "#functions" },
+    { "include": "#variables" }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.semicolon.gmerge",
+          "match": ";.*$"
+        }
+      ]
+    },
+    "tag": {
+      "patterns": [
+        {
+          "name": "meta.embedded.gmerge",
+          "begin": "\\[\\[",
+          "beginCaptures": { "0": { "name": "punctuation.section.embedded.begin.gmerge" } },
+          "end": "\\]\\]",
+          "endCaptures": { "0": { "name": "punctuation.section.embedded.end.gmerge" } },
+          "patterns": [
+            { "include": "#comment" },
+            { "include": "#strings" },
+            { "include": "#numbers" },
+            { "include": "#operators" },
+            { "include": "#keywords" },
+            { "include": "#functions" },
+            { "include": "#variables" }
+          ]
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.gmerge",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [{ "name": "constant.character.escape.gmerge", "match": "\\\\." }]
+        },
+        {
+          "name": "string.quoted.single.gmerge",
+          "begin": "'",
+          "end": "'",
+          "patterns": [{ "name": "constant.character.escape.gmerge", "match": "\\\\." }]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        { "name": "constant.numeric.gmerge", "match": "\\b\\d+(\\.\\d+)?\\b" }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        { "name": "keyword.operator.logical.gmerge", "match": "\\b(and|or|not)\\b" },
+        { "name": "keyword.operator.comparison.gmerge", "match": "(==|!=|<=|>=|<|>)" },
+        { "name": "keyword.operator.assignment.gmerge", "match": "(:=|=)" }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        { "name": "keyword.control.gmerge", "match": "\\b(if|elseif|else|endif|for|endfor|while|endwhile|break|continue|return)\\b" },
+        { "name": "keyword.other.gmerge", "match": "\\b(var|let|true|false|null|TRUE|FALSE|NULL)\\b" }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.gmerge",
+          "match": "\\b(db_add_row|db_update_row|db_acquire_row|db_delete_row|disregard|extract|trim|lower|upper|substr|str_contains|str_find|str_left|str_length|convert_lower_case|date_current|date_format)\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        { "name": "variable.other.gmerge", "match": "\\b_[A-Za-z][A-Za-z0-9_]*\\b" }
+      ]
+    }
+  }
+}

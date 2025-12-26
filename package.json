@@ -1,0 +1,51 @@
+{
+  "name": "gammadyne-gmerge",
+  "displayName": "Gammadyne G-Merge Script",
+  "description": "Syntax highlighting and snippets for Gammadyne Mailer (G-Merge) scripts.",
+  "version": "0.0.1",
+  "publisher": "nexusbr",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Programming Languages"],
+  "keywords": [
+    "gammadyne",
+    "g-merge",
+    "mailer",
+    "email automation",
+    "scripting"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmpin-nexus/gammadyne-gmerge-vscode"
+  },
+  "homepage": "https://nexusbr.com",
+  "bugs": {
+    "url": "https://github.com/jmpin-nexus/gammadyne-gmerge-vscode/issues"
+  },
+  "license": "MIT",
+  "contributes": {
+    "languages": [
+      {
+        "id": "gmerge",
+        "aliases": ["G-Merge", "Gammadyne Script"],
+        "extensions": [".gmerge", ".gmerge.txt", ".gms"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gmerge",
+        "scopeName": "source.gmerge",
+        "path": "./syntaxes/gmerge.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "gmerge",
+        "path": "./snippets/gmerge.code-snippets"
+      }
+    ]
+  }
+}
